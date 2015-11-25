@@ -14,6 +14,7 @@
 		6D6FF0D41C06405E00265E3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D6FF0D21C06405E00265E3B /* LaunchScreen.storyboard */; };
 		6D6FF0DF1C06405E00265E3B /* TrackThyTravelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6FF0DE1C06405E00265E3B /* TrackThyTravelTests.swift */; };
 		6D6FF0EA1C06405E00265E3B /* TrackThyTravelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6FF0E91C06405E00265E3B /* TrackThyTravelUITests.swift */; };
+		6D6FF0F81C0641BE00265E3B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D6FF0F71C0641BE00265E3B /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,8 @@
 		6D6FF0E51C06405E00265E3B /* TrackThyTravelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrackThyTravelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D6FF0E91C06405E00265E3B /* TrackThyTravelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackThyTravelUITests.swift; sourceTree = "<group>"; };
 		6D6FF0EB1C06405E00265E3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D6FF0F71C0641BE00265E3B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		6D6FF0F91C0641E300265E3B /* TrackThyTravel.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TrackThyTravel.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D6FF0F81C0641BE00265E3B /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +81,7 @@
 		6D6FF0BD1C06405E00265E3B = {
 			isa = PBXGroup;
 			children = (
+				6D6FF0F71C0641BE00265E3B /* MapKit.framework */,
 				6D6FF0C81C06405E00265E3B /* TrackThyTravel */,
 				6D6FF0DD1C06405E00265E3B /* TrackThyTravelTests */,
 				6D6FF0E81C06405E00265E3B /* TrackThyTravelUITests */,
@@ -97,6 +102,7 @@
 		6D6FF0C81C06405E00265E3B /* TrackThyTravel */ = {
 			isa = PBXGroup;
 			children = (
+				6D6FF0F91C0641E300265E3B /* TrackThyTravel.entitlements */,
 				6D6FF0C91C06405E00265E3B /* AppDelegate.swift */,
 				6D6FF0CB1C06405E00265E3B /* ViewController.swift */,
 				6D6FF0CD1C06405E00265E3B /* Main.storyboard */,
@@ -194,6 +200,23 @@
 					6D6FF0C51C06405E00265E3B = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = 3W3UUT327F;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.DataProtection = {
+								enabled = 0;
+							};
+							com.apple.Keychain = {
+								enabled = 0;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					6D6FF0D91C06405E00265E3B = {
 						CreatedOnToolsVersion = 7.2;
@@ -402,10 +425,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TrackThyTravel/TrackThyTravel.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TrackThyTravel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = NithinApps.TrackThyTravel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -413,10 +440,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TrackThyTravel/TrackThyTravel.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TrackThyTravel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = NithinApps.TrackThyTravel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
